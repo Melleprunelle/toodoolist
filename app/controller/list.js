@@ -20,12 +20,6 @@ app.controller("listInputCtrl", function ($scope) {
     };
 
     $scope.removeTodo = function (index) {
-        listData.splice(listData.indexOf(index), 1);
-    };
-
-    $scope.markAll = function (completed) {
-        listData.forEach(function (todo) {
-            listData.completed = !completed;
-        });
+        $scope.listData.splice($scope.listData.indexOf(index), 1);
     };
 });
