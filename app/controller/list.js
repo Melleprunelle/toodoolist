@@ -20,6 +20,12 @@ app.controller("listInputCtrl", function ($scope) {
     };
 
     $scope.removeTodo = function (index) {
-        $scope.listData.splice($scope.listData.indexOf(index), 1);
+        $scope.listData.splice($scope.listData.indexOf(index, 1));
+    };
+    
+    $scope.clear = function () {
+            $scope.listData.splice(0);
     };
 });
+    
+    

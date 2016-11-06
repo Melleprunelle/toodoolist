@@ -53,13 +53,14 @@ header div {
 }
 
 input {
-    width: 74%;
+    width: 50%;
     margin-right: 0px;
     padding: 20px;
     border: none;
     height: 50px;
     background-color: whitesmoke;
     color: #222;
+    border-bottom: #222 solid 1px;
 }
 
 input:focus {
@@ -68,6 +69,8 @@ input:focus {
     margin: 0px;
     box-shadow: none;
     outline: inherit;
+    box-sizing: inherit;
+    border-bottom: #222 solid 1px;
 }
 
 button {
@@ -80,16 +83,18 @@ button {
     color: whitesmoke;
     text-transform: uppercase;
     cursor: pointer;
+    box-sizing: inherit;
+    float: right;
+    border-bottom: #222 solid 1px;
 }
 
-button:hover{
+button:hover {
     background-color: #222;
 }
 
 .toodoolist div {
     width: 100%;
     height: 410px;
-    border-top: 1px solid #a90329;
 }
 
 .toodoolist ul {
@@ -103,7 +108,7 @@ button:hover{
 }
 
 .instruction {
-    margin-top: 50px;    
+    margin-top: 50px;
     margin-bottom: 20px;
     height: 75px;
 }
@@ -114,7 +119,8 @@ button:hover{
     display: inline-block;
 }
 
-.instruction input, i {
+.instruction input,
+i {
     width: 15px;
     height: 15px;
     margin: 3px;

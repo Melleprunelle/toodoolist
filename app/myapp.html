@@ -24,6 +24,7 @@
         <section class="toodoolist" ng-controller="listInputCtrl">
             <input type="text" placeholder="my instruction" ng-model="lists.instruction">
             <button type="submit"  ng-click="addList(lists)">Add</button>
+            <button type="submit" ng-click="clear()">Clear</button>
             <div>
                 <ul>
                     <li class="instruction" ng-repeat="liste in listData">
