@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Too Doo List</title>
+
+    <script src="angular/angular.min.js"></script>
+    <script src="module/app.js"></script>
+    <script src="controller/list.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font/font-awesome-4.6.3/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body ng-app="myApp">
+    <div class="body" ng-controller="listCtrl">
+        <header>
+            <h1>Too Doo List</h1>
+            <div class="separator"></div>
+        </header>
+
+        <section class="toodoolist" ng-controller="listInputCtrl">
+            <input type="text" placeholder="my instruction" ng-model="lists.instruction">
+            <button type="submit"  ng-click="addList(lists)">Add</button>
+            <div>
+                <ul>
+                    <li class="instruction" ng-repeat="liste in listData">
+                        <div>
+                            <input type="checkbox" ng-model="deleted">
+                            <i class="fa fa-times" aria-hidden="true"  ng-click="removeTodo(index)"></i>
+                        </div>
+                        <p ng-class="{strike: deleted}">{{liste.instruction}}</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
